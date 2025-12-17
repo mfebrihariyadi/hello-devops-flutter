@@ -11,7 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(child: Text('Hello World v3 - Git Deploy', style: TextStyle(fontSize: 32))),
+        body: Center(
+          child: Text('Hello World v4 - Git Deploy Menggunakan URL dari GIT', style: TextStyle(fontSize: 32)),
+        ),
       ),
     );
   }
