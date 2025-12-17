@@ -19,6 +19,8 @@ jobs:
 
       - name: Deploy to Laragon
         run: |
-            rm -rf E:\Project\laragon\www\hello-flutter
-            mkdir E:\Project\laragon\www\hello-flutter
-            cp -r build\web\* E:\Project\laragon\www\hello-flutter\ 
+            if (Test-Path "E:\Project\laragon\www\hello-flutter") {
+            Remove-Item "E:\Project\laragon\www\hello-flutter" -Recurse -Force
+            }
+            New-Item -ItemType Directory -Path "E:\Project\laragon\www\hello-flutter"
+            Copy-Item "build\web\*" "E:\Project\laragon\www\hello-flutter" -Recurse -Force
