@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - run: flutter pub get
-      - run: flutter build web
+      - run: flutter build web --base-href /hello-flutter/
 
       - name: Deploy to Laragon
         run: |
